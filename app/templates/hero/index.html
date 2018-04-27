@@ -1,0 +1,42 @@
+{% extends "hero/layout.html" %}
+{% block content %}
+<div class="grid-container">
+  <div class="grid-y medium-grid-frame">
+    <div class="cell shrink header medium-cell-block-container">
+      <div class="grid-x grid-padding-x callout">
+        <div class="cell medium-1">
+          <img src="{{ url_for('static', filename='emo.png') }}"/>
+        </div>
+        <div class="cell medium-11">
+          <h3>event list</h3>
+        </div>
+      </div>
+    </div>
+    <div class="cell medium-auto medium-cell-block-container">
+      <div class="grid-x grid-margin-x">
+        <div class="cell medium-3 medium-cell-block-y">
+          <div class="callout secondary">
+            <h4>menu</h4>
+            <ul class="vertical menu">
+              <li><a href="#">event list</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="cell medium-9 medium-cell-block-y">
+          <form action="confirm" method="post">
+            <label>
+              event id<input type="text" placeholder="please input event id"/>
+            </label>
+            <div style="text-align: center">
+              <button type="submit" class="hollow button secondary">create</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="cell shrink footer">
+      copylight 2018
+    </div>
+  </div>
+</div>
+{% endblock %}
