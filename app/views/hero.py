@@ -24,7 +24,7 @@ def register():
     return render_template("hero/register.html")
 
 
-@mod.route('delete', methods=['POST'])
+@mod.route('/delete', methods=['POST'])
 def delete():
     bug = Bug.query.get(request.form['id'])
     bug.delete()
