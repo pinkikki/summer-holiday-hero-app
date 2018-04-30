@@ -1,0 +1,4 @@
+# flask_sqlalchemyのトランザクション管理
+
+デフォルトだと、恐らくマルチスレッドに対応できていない。
+'SQLAlchemy#create_scoped_session'とかで、セッションをスレッド毎に作成する必要がある。
