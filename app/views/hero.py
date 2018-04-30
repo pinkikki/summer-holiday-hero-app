@@ -24,6 +24,13 @@ def register():
     return render_template("hero/register.html")
 
 
+@mod.route('delete', methods=['POST'])
+def delete():
+    bug = Bug.query.get(request.form['id'])
+    bug.delete()
+    db_manager.commit()
+
+
 @mod.route('/show', methods=['GET'])
 def show():
     bugs = Bug.query.all()

@@ -17,6 +17,9 @@ class Bug(db.Model):
     def insert(self):
         db.session.add(self)
 
+    def delete(self):
+        db.session.delete(self)
+
 
 def commit():
     db.session.commit()
