@@ -18,7 +18,7 @@ pipeline {
                 }
             }
             steps {
-                sh 'pip install --upgrade pip'
+                sh 'sudo pip install --upgrade pip'
                 sh 'pip install -r requirements.txt'
                 sh 'python -m pytest --verbose --cov --cov-report=html --junitxml=reports/result.xml'
             }
