@@ -28,3 +28,9 @@ https://qiita.com/sugiyasu-qr/items/85a1bedb6458d4573407
 * フリースタイル  これだと、Pipelineが設定できなかった
 * GitHub Organization  これだと、githubのwebhookとかを設定できなかった（ビルド・トリガーの設定ができない）
 * Pipeline  これでやるべきなのかな
+
+## pip
+
+jenkinsから起動したdockerで、`pip install -r requiremrents.txt`を実行すると、以下のエラー
+`Could not install packages due to an EnvironmentError: [Errno 13] Permission denied: '/usr/local/lib/python3.6/site-packages/apipkg.py'`
+うーん、どうしようかな。sudoもできないしな…自分で、docker imageを作成するしかないかぁ
