@@ -14,7 +14,7 @@ pipeline {
         stage('Test') {
             agent {
                 docker {
-                    image 'uroybd/python3-psycopg2-alpine'
+                    image 'blurrcat/alpine-python-psycopg2:1.0'
                 }
             }
             steps {
