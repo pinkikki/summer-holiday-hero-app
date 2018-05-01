@@ -1,10 +1,29 @@
 pipeline {
-    agent any
-    
+    agent none
     stages {
-        stage('Test') {
+        stage('Build') {
+            agent {
+                docker {
+                    image `python:3-alpine`
+                }
+            }
             steps {
-                echo 'Test'
+                sh 'python -m compileall run.py app/'
+            }
+        }
+        stage('Test') {
+            agent {
+                docker {
+                    image `python:3-alpine`
+                }
+            }
+            steps {
+                sh 'python -m pytest --verbose --cov --cov-report=html --junitxml=reports/result.xml'
+            }
+            post {
+                always {
+                    junit 'reports/result.xml'
+                }
             }
         }
     }
