@@ -7,7 +7,7 @@ execnet==1.5.0
 Flask==1.0
 Flask-SQLAlchemy==2.3.2
 itsdangerous==0.24
-Jinja2==2.10
+Jinja2==2.10.1
 MarkupSafe==1.0
 more-itertools==4.1.0
 pep8==1.7.1
@@ -18,5 +18,5 @@ pytest-cache==1.0
 pytest-cov==2.5.1
 pytest-pep8==1.0.6
 six==1.11.0
-SQLAlchemy==1.2.7
+SQLAlchemy==1.3.0
 Werkzeug==0.14.1
